@@ -1,7 +1,8 @@
-import { createStore } from "redux";
-import reducer from "./reducers/number-reducer";
+import { configureStore } from "@reduxjs/toolkit";
 
-//create store
-const store =createStore(reducer);
 
-export default store;
+const store = configureStore({
+    reducer: {
+        
+    }
+})
