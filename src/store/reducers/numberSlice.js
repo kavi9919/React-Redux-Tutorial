@@ -11,6 +11,11 @@ const numberSlice = createSlice(
             increment: (state ,action) => {
                 state.number += 1;
             },
+            decrement: (state, action) => {
+                state.number -= 1;
+            },
         }
     }
-)
+);
+export const {increment, decrement} = numberSlice.actions;
+export default numberSlice.reducer;
