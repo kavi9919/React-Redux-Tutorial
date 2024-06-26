@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState={
     count : 0,
-    brands:[]
+    brands:'MSI'
 }
 
 const laptopSlice = createSlice({
@@ -15,8 +15,11 @@ const laptopSlice = createSlice({
         removeLaptop:(state,action) => ({
             count:state.count -= 1
         }),
+        addBrands:(state ,action)=>({
+            brands:action.payload
+        })
     }
 });
 
 export default laptopSlice.reducer;
-export const {addLaptop,removeLaptop} = laptopSlice.actions;
+export const {addLaptop,removeLaptop ,addBrands} = laptopSlice.actions;

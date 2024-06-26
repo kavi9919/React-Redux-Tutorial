@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 
 const NumberCount = () => {
     const number =useSelector(store=>store.numberSlice.number)
+    const brands =useSelector(store => store.laptopSlice.brands)
   return (
-    <h1>NumberCount is {number} </h1>
+    <div>
+        <h1>Computer brand is {brands} </h1>
+    </div>
   )
 }
 
